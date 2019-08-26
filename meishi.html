@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8 lt9 lt10"><![endif]-->
+<!--[if IE 9]><html class="ie ie9 lt10"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!-->
+<html>
+
+
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="www.fractal-technology.com">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="keywords" content="今日和府" />
+    <meta name="description" content="今日和府" />
+
+    <title> 卖面翁 - 刘师傅 | 黑猪肉面 </title>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/global.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/slick.js"></script>
+    <link rel="stylesheet" href="css/lunbo.css">
+    <link rel="stylesheet" href="css/head.css">
+</head>
+
+
+<div id="myalert" class="layer">
+    <div class="myalert">
+        <a href="javascript:;" onclick="myalert_hide();" class="guan"></a>
+        <div class="text">请输入关键字</div>
+        <a><button class="button" id="my_ok" style="cursor:pointer">OK</button></a>
+    </div>
+</div>
+
+<script>
+    function my_alert(title, url) {
+        $('#myalert').show();
+        $('#myalert .myalert div').html(title);
+        if (url) {
+            $('#my_ok').click(function () {
+                window.location.href = url;
+            });
+        } else {
+            $('#my_ok').click(function () {
+                $('#myalert').hide();
+            });
+        }
+    }
+
+    function myalert_hide() {
+        $('#myalert').hide();
+    }
+</script>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="wrap cf">
+            <a href="index.html" class="logo">
+                <img src="img/s5b2b40774efe8.png" alt="" title="">
+            </a>
+
+            <div class="t_n_m">
+                <ul>
+                    <li>
+                        <h3><a href="index.html">首页</a></h3>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><a href="guanyu.html">关于我们</a></h3>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><a href="meishi.html">美食中心</a></h3>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><a href="xinwen.html">新闻资讯</a></h3>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><a href="zhaoshang.html">招商加盟</a></h3>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><a href="lianxi.html">联系我们</a></h3>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><a href="chenggong.html">成功案例</a></h3>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="r cf">
+                <a href="javascript:;" class="nav"></a>
+
+                <a href="javascript:;" class="wx">
+                    <div class="e"><img src="img/weixin.jpg" alt="微信二维码" title="微信二维码"></div>
+                </a>
+                <a href="javascript:;" class="wb">
+                    <div class="e"><img src="img/weibo.png" alt="微博二维码" title="微博二维码"></div>
+                </a>
+
+
+            </div>
+            <script>
+                $(function () {
+                    $('#btn').click(function () {
+                        var keywords = $("#search").val();
+                        // alert(keywords);
+                        if (keywords == '' || keywords == '请输入关键词') {
+                            my_alert("请输入关键词");
+                            return false;
+                        }
+
+                        window.location.href = "/searchs/archives.html?title=" + encodeURI(keywords);
+                    });
+                })
+
+                function keydown(e, but) {
+                    var currKey = 0,
+                        e = e || event;
+                    var _this = $(but);
+
+                    if (e.keyCode == 13) {
+                        _this.click();
+                        return false;
+                    }
+                }
+            </script>
+        </div>
+        <div class="nav_show">
+            <div class="wrap">
+                <ul class="cf">
+                    <li>
+                        <h3><a href="index.html">官网首页</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="guanyu.html">关于我们</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="meishi.html">美食中心</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="xinwen.html">新闻资讯</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="zhaoshang.html">招商加盟</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="lianxi.html">联系我们</a></h3>
+                    </li>
+                    <li>
+                        <h3><a href="chenggong.html">成功案例</a></h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="goto"></a>
+    <div class="body_box">
+        <div>
+            <div class="today_1">
+                <img src="img/meishi1.jpg" data-src="" class="img" alt="">
+
+                <a href="javascript:;" class="scrollNext"></a>
+            </div>
+        </div>
+        <div class="today_2" id="page2">
+            <div class="top wrap" edit_params="title2Show%3D1%26title2Max%3D20%26title1Show%3D1%26title1Max%3D20">
+                <h2 class="title_h2">招牌·推荐</h2>
+                <h3 class="title_h3">一碗吃上瘾，再来三大碗</h3>
+            </div>
+            <div
+                edit_params="width%3D1920%26height%3D890%26showAlt%3D1%26showLink%3D1%26sjtuShow%3D1%26width2%3D640%26height2%3D480">
+                <div class="today2_slick">
+                    <div class="li">
+                        <!-- 招牌推荐图片 -->
+                        <a><img src="img/liushifuheizhuroumian.jpg" class="" data-src="" alt=""></a>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="today_3" id="page3">
+            <div class="wrap">
+                <img src="img/mian01.png" style=" max-width: 100%;" alt="">
+
+                <div>
+                    <div class="tab_today3">
+                        <div class="li">
+                            <div class="img">
+                                <img src="img/tesemian.png" class="i1" alt="">
+                                <img src="img/tesemian02.png" class="i2" alt="" title="特色面">
+                            </div>
+
+                        </div>
+                        <div class="li">
+                            <div class="img">
+                                <img src="img/tesexiaoshi.png" class="i1" alt="">
+                                <img src="img/tesexiaoshi02.png" class="i2" alt="" title="特色小食">
+                            </div>
+
+                        </div>
+                        <div class="li">
+                            <div class="img">
+                                <img src="img/teseyinpin.png" class="i1" alt="">
+                                <img src="img/teseyinpin02.png" class="i2" alt="" title="特色饮品">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab_today3_li">
+                    <div class="child cf">
+                        <div class="xunhuan">
+
+                            <img src="img/lun-1.png" width="333" height="435">
+                            <img src="img/lun-2.png" width="333" height="435">
+                            <img src="img/lun-3.png" width="333" height="435">
+                            <img src="img/lun-4.png" width="333" height="435">
+                            <img src="img/lun-5.png" width="333" height="435">
+                            <img src="img/lun-6.png" width="333" height="435">
+                            <img src="img/lun-1.png" width="333" height="435">
+                            <img src="img/lun-2.png" width="333" height="435">
+                            <img src="img/lun-3.png" width="333" height="435">
+                            <img src="img/lun-4.png" width="333" height="435">
+                            <!-- <img src="img/lun-5.png" width="333" height="435">
+                            <img src="img/lun-6.png" width="333" height="435"> -->
+
+                        </div>
+
+                    </div>
+
+                    <div class="child cf">
+                        <div class="xunhuan1">
+                            <img src="img/xiaoshi (1).png" width="333" height="435">
+                            <img src="img/xiaoshi (2).png" width="333" height="435">
+                            <img src="img/xiaoshi (3).png" width="333" height="435">
+                            <img src="img/xiaoshi (4).png" width="333" height="435">
+                            <img src="img/xiaoshi (5).png" width="333" height="435">
+                            <img src="img/xiaoshi (1).png" width="333" height="435">
+                            <img src="img/xiaoshi (2).png" width="333" height="435">
+                            <img src="img/xiaoshi (3).png" width="333" height="435">
+                            <img src="img/xiaoshi (4).png" width="333" height="435">
+                            <!-- <img src="img/xiaoshi (5).png" width="333" height="435">
+                            <img src="img/xiaoshi (1).png" width="333" height="435">
+                            <img src="img/xiaoshi (2).png" width="333" height="435"> -->
+                        </div>
+
+                    </div>
+
+                    <div class="child cf">
+                        <div class="xunhuan2">
+                            <img src="img/yinpin (1).png" width="333" height="435">
+                            <img src="img/yinpin (2).png" width="333" height="435">
+                            <img src="img/yinpin (3).png" width="333" height="435">
+                            <img src="img/yinpin (4).png" width="333" height="435">
+                            <img src="img/yinpin (5).png" width="333" height="435">
+                            <img src="img/yinpin (6).png" width="333" height="435">
+                            <img src="img/yinpin (7).png" width="333" height="435">
+                            <img src="img/yinpin (8).png" width="333" height="435">
+                            <img src="img/yinpin (1).png" width="333" height="435">
+                            <img src="img/yinpin (2).png" width="333" height="435">
+                            <img src="img/yinpin (3).png" width="333" height="435">
+                            <img src="img/yinpin (4).png" width="333" height="435">
+                            <!-- <img src="img/yinpin (5).png" width="333" height="435">
+                            <img src="img/yinpin (6).png" width="333" height="435">
+                            <img src="img/yinpin (7).png" width="333" height="435">
+                            <img src="img/yinpin (8).png" width="333" height="435"> -->
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- <div class="more_com">
+					<a href="/show.html"><span class="s1"><span class="s2">查看更多和府美食</span></span></a>
+				</div> -->
+            </div>
+        </div>
+        <div class="today_4 cf" id="page4">
+
+            <img src="img/mendianjingcai.jpg" style="width: 100%;">
+        </div>
+
+        <div id="page6">
+
+            <img src="img/youhui.jpg" alt="" style="width: 100%;">
+        </div>
+
+    </div>
+
+
+    <script src=" js/cloud_3d.js">
+    </script>
+
+
+    <div class="section sectionFooter">
+        <div class="footer" style="background:url(img/bottom.jpg) no-repeat center top">
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="bot">
+                <div class="wrap cf">
+                    <a href="#page1" class="asd123 asd11"></a>
+                    <a href="index.html" class="asd123 asd12"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?c170eef409931c9ade3cb3db2d0d22dc";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        $(function () {
+
+            $(".today2_slick").slick({
+                autoplay: false,
+                infinite: false,
+                slide: ".li",
+                speed: 1000,
+                touchMove: false,
+                responsive: [{
+                    breakpoint: 640,
+                    settings: {
+                        speed: 500,
+                    }
+
+                }],
+                onAfterChange: function (a, b) {}
+            });
+            // 美食版块效果代码
+            $(".tab_today3 .li").on("click", function () {
+                var i = $(this).index();
+                $(this).addClass("on").siblings().removeClass("on");
+                $(".tab_today3_li .child").eq(i).fadeIn(300).siblings().hide();
+            })
+            $(".tab_today3 .li").eq(0).click();
+
+        });
+
+        $(function () {
+
+            setTimeout(function () {
+                $(".today_1").addClass("show")
+            }, 500);
+
+            $(window).scroll(function () {
+                scorllAnimate(".today_3");
+                scorllAnimate(".today_4");
+                scorllAnimate(".today_6");
+            })
+        })
+    </script>
+</body>
+
+</html>

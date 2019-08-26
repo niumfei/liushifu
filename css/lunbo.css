@@ -1,0 +1,172 @@
+.child {
+    overflow: hidden;
+}
+
+.xunhuan,
+.xunhuan1,
+.xunhuan2 {
+    width: 6000px;
+    height: 100%;
+}
+
+.xunhuan {
+
+    animation: slide 24s linear infinite;
+}
+
+.xunhuan1 {
+
+    animation: slide1 20s linear infinite;
+}
+
+.xunhuan2 {
+
+    animation: slide2 32s linear infinite;
+}
+
+@keyframes slide {
+    from {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: -115.2rem;
+    }
+}
+
+@keyframes slide1 {
+    from {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: -96rem;
+    }
+}
+
+@keyframes slide2 {
+    from {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: -153.6rem;
+    }
+}
+
+.xunhuan img,
+.xunhuan1 img,
+.xunhuan2 img {
+    width: 19.2rem;
+    height: auto;
+    float: left;
+}
+
+.xunhuan:hover {
+    animation-play-state: paused;
+}
+
+.xunhuan1:hover {
+    animation-play-state: paused;
+}
+
+.xunhuan2:hover {
+    animation-play-state: paused;
+}
+
+.xunhuan:hover img {
+    opacity: 0.5;
+}
+
+.xunhuan1:hover img {
+    opacity: 0.5;
+}
+
+.xunhuan2:hover img {
+    opacity: 0.5;
+}
+
+.xunhuan img:hover {
+    opacity: 1;
+}
+
+.xunhuan1 img:hover {
+    opacity: 1;
+}
+
+.xunhuan2 img:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width:640px) {
+
+    .xunhuan,
+    .xunhuan1,
+    .xunhuan2 {
+        width: 6000px;
+        height: 100%;
+
+    }
+
+    .xunhuan {
+        animation: slide 20s linear infinite;
+    }
+
+    .xunhuan1 {
+        animation: slide1 16s linear infinite;
+    }
+
+    .xunhuan2 {
+        animation: slide2 24s linear infinite;
+    }
+
+    @keyframes slide {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: -12rem;
+        }
+    }
+
+    @keyframes slide1 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: -10rem;
+        }
+    }
+
+    @keyframes slide2 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: -16rem;
+        }
+    }
+
+    .xunhuan img,
+    .xunhuan1 img,
+    .xunhuan2 img {
+        height: auto;
+        width: 2rem;
+    }
+}
+
+.today_3 {
+    padding: 0%;
+}
+
+.tab_today3 .li .img img {
+    max-width: 100%;
+    height: auto;
+}
+
+#menu li a {
+    background-image: url(img/nav_dot2.png);
+}
